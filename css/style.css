@@ -1,0 +1,21 @@
+
+h1{
+    text-align: center;
+    color: white;
+}
+form{
+    text-align: center;
+}
+input[type='text']{
+    font-size: 2em;
+    border-radius: 5px;
+    width: 40%;
+}
+input[type='submit']{
+    font-size: 2em;
+    border-radius: 5px;
+    background-color: pink;
+}
+body{
+    background-image: url(../image/wallpaper.jpg);
+}
