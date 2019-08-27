@@ -7,6 +7,11 @@
     <title>TO DO LIST</title>
 </head>
 <body>
+<h1>THINGS TO BE DONE</h1>
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"method="post">
+<input type="text" name="item">
+<input type="submit" value="ADD">
+</form>
     
 </body>
 </html>
