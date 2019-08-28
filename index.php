@@ -1,3 +1,7 @@
+<?php 
+session_start();
+//session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +21,39 @@
 
 <h1>THINGS TO BE DONE</h1><hr>
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"method="post">
-<input type="text" name="item">
+<input required type="text" name="item">
 <input type="submit" value="ADD">
 
 </form>
 
+<?php 
+if($_POST){
+    $any = $_POST['item'];
+    if(isset($_SESSION['items'])){
+        //if isset have been set let the value of $_SESSION be equal to $any
+        $_SESSION['items'][] = $any;
+        
+    }else{
+        // else let $_SESSION be equal to an empty array
+        $_SESSION['items'] = [];
+    }
 
+displaylist();
+    
+}
+
+function displaylist(){
+    $date = date('Y-m-d');
+       
+     echo "<ul>";
+     foreach($_SESSION['items'] as $item){
+         echo "<li>".$item."   ".$date."</li><br>";
+     };
+     echo "</ul>";
+     
+   }
+
+?>
 
     
 </body>
