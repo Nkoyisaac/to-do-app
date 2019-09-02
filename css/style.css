@@ -1,7 +1,7 @@
 
 h1{
     text-align: center;
-    color: rgb(211, 224, 26);
+    color: white;
 }
 form{
     text-align: center;
@@ -14,7 +14,8 @@ input[type='text']{
 input[type='submit']{
     font-size: 2em;
     border-radius: 10px;
-    background-color: pink;
+    background-color: rgb(141, 245, 167);
+    border: none;
 }
 body{
     background-image: url(../image/wallpaper.jpg);
@@ -29,5 +30,27 @@ li{
     width: 70%;
     list-style: none;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    overflow-x:auto;
+}
+span{
+    float: right;
+}
+li:hover{
+    transform: scale(1,002);
+    background-color: rgb(206, 198, 198);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+button:hover{
+    transform: scale(1.05);
+    background-color: rgb(148, 226, 200);
+}
+button{
+    font-size: 2em;
+    background-color: rgb(119, 65, 119);
+    border-radius: 10px;
+    border: none;
 }
